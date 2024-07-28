@@ -111,10 +111,18 @@
         </div>
         <div class="container-about ">
             <div class="contentLeft">
-              <video src="image/video .mp4" loop="" autoplay="autoplay" muted=""></video>
 
-            
-             
+              <video width="600"  autoplay muted controls>
+                <source src="image/video .mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <script>
+              // Check if the video is loaded properly
+              document.querySelector('video').addEventListener('error', function(event) {
+                  console.log('Error loading video:', event);
+                  alert('There was an error loading the video.');
+              });
+          </script>
               <!-- <div class="row">
                   <div class="imgWrapper">
                       <img src="https://images.unsplash.com/photo-1687579521048-217e24217d53?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODg5ODcxNzl8&ixlib=rb-4.0.3&q=85" alt="">
