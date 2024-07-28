@@ -91,7 +91,6 @@ var swiper = new Swiper(".slide-content", {
     },
   });
 //scroll
-// Add event listener to all links with hashes
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
